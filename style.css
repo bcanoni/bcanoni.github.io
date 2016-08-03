@@ -12,6 +12,7 @@
 }
 .container:hover { 
 	top: 20vh;
+	transform: scale(1.15);
 }
 .container:hover > #Links {
 	animation-name: fade,slide;
