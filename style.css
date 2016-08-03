@@ -1,0 +1,135 @@
+/* Brian Canoni - 7/31/2016 */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
+.container {    
+	font-family: 'Open Sans', sans-serif;
+	position: absolute;
+	left: 20vw;
+	top: 28vh;
+	width: 100vw;
+	transition: all 2s;
+	/*cursor: crosshair;*/
+}
+.container:hover { 
+	top: 20vh;
+	transform: scale(1.1);
+}
+.container:hover > #Links {
+	animation-name: fade,slide;
+    animation-duration: 2s, 2s;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+body {
+	background-color: #f2f2f2;
+	white-space: nowrap;
+    overflow-x: hidden;
+}
+
+#BrianHeader {
+	position: relative;	
+	margin: 0;
+	font-size: 36px; 
+	font-size: 10vw;    
+	opacity: 1.0;    
+	animation-name: fade;
+    animation-duration: 3s;   
+}
+
+#Links {	
+    list-style-type: none;
+	opacity: 0.0;
+}
+
+li {		
+	list-style-type: none;	
+	font-size: 18px; 
+	font-size: 6vmax;	
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+#Item1 {	
+	/*
+	animation-name: fade,slide;
+    animation-duration: 4s, 2s;
+	animation-delay: 1.5s;
+	animation-fill-mode: forwards;
+	
+	opacity: 0.0;
+	*/
+	transition: all 0.5s;
+}
+#Item1:hover {
+	background: #ff6666;	
+}
+
+#Item2 {		
+    /*
+	animation-name: fade ,slide2;
+	animation-duration: 4s, 2.5s;
+	animation-delay: 1.8s;
+	animation-fill-mode: forwards;
+	opacity: 0.0;
+    */
+	transition: all 0.5s;
+}
+#Item2:hover {
+	background: #ff6666;	
+}
+
+@keyframes fade {
+    from {opacity: 0.0;}
+    to {opacity: 1.0;}
+}
+
+@keyframes slide {
+	from {transform: translateY(-200px);}
+	to {transform: translateY(-45px);}
+}
+
+@keyframes slide2 {
+	from {transform: translateY(-400px);}
+	to {transform: translateY(0px);}
+}
+
+.parallax-top {
+	
+	position: absolute;
+	top: 0;
+    left: 0;
+    width: 100%;
+	z-index: -10;	
+   
+    background-image: url("res/beach.jpg");
+    
+    min-height: 23vh;
+   
+    background-attachment: fixed; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-bottom {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	top: 50vmax; 
+	
+	z-index: -10;
+   
+    background-image: url("res/beach.jpg");
+    
+    min-height: 22vmax;
+    
+    background-attachment: fixed; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
